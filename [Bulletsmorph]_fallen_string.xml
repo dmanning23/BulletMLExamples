@@ -1,16 +1,18 @@
 <?xml version="1.0" ?>
 <!DOCTYPE bulletml SYSTEM "../bulletml.dtd">
 <bulletml>
+
 	<action label="top">
 		<repeat>
 			<times>5</times>
 			<action>
-				<actionRef label="impl:48"></actionRef>
+				<actionRef label="impl:48"/>
 				<wait>50</wait>
 			</action>
 		</repeat>
 		<wait>50</wait>
 	</action>
+	
 	<action label="impl:48">
 		<wait>20</wait>
 		<fire>
@@ -18,12 +20,13 @@
 			<speed type="absolute">0.6</speed>
 			<bullet>
 				<action>
-					<actionRef label="impl:60"></actionRef>
-					<actionRef label="impl:38"></actionRef>
+					<actionRef label="impl:60"/>
+					<actionRef label="impl:38"/>
 				</action>
 			</bullet>
 		</fire>
 	</action>
+	
 	<action label="impl:60">
 		<fire>
 			<direction type="aim">0</direction>
@@ -37,6 +40,7 @@
 		</fire>
 		<wait>3</wait>
 	</action>
+	
 	<bullet label="bulletmls/[Progear]_round_4_boss_fast_rocket.xml:_:downAccel">
 		<action>
 			<accel>
@@ -45,6 +49,7 @@
 			</accel>
 		</action>
 	</bullet>
+	
 	<action label="impl:38">
 		<fireRef label="bulletmls/[Progear]_round_5_middle_boss_rockets.xml:_:udBlt">
 			<param>90</param>
@@ -55,14 +60,16 @@
 		</fireRef>
 		<wait>24-$rank*8</wait>
 	</action>
+	
 	<fire label="bulletmls/[Progear]_round_5_middle_boss_rockets.xml:_:udBlt">
 		<direction type="relative">$1-25+$rand*50</direction>
 		<bullet>
 			<action>
-				<actionRef label="impl:59"></actionRef>
+				<actionRef label="impl:59"/>
 			</action>
 		</bullet>
 	</fire>
+	
 	<action label="impl:59">
 		<repeat>
 			<times>9999</times>
@@ -70,15 +77,16 @@
 				<fire>
 					<direction type="absolute">0</direction>
 					<speed type="absolute">1</speed>
-					<bulletRef label="bulletmls/[Progear]_round_4_boss_fast_rocket.xml:_:downAccel"></bulletRef>
+					<bulletRef label="bulletmls/[Progear]_round_4_boss_fast_rocket.xml:_:downAccel"/>
 				</fire>
 				<fire>
 					<direction type="absolute">60</direction>
 					<speed type="absolute">1.8</speed>
-					<bulletRef label="bulletmls/[Progear]_round_4_boss_fast_rocket.xml:_:downAccel"></bulletRef>
+					<bulletRef label="bulletmls/[Progear]_round_4_boss_fast_rocket.xml:_:downAccel"/>
 				</fire>
 				<wait>3</wait>
 			</action>
 		</repeat>
 	</action>
+	
 </bulletml>

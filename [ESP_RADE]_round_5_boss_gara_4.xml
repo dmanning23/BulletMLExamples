@@ -4,67 +4,70 @@
 <bulletml 
           xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
-<bullet label="featherShot">
- <speed>7</speed>
- <action>
-  <changeSpeed>
-   <speed>0</speed>
-   <term>20</term>
-  </changeSpeed>
-  <wait>20</wait>
+	<bullet label="featherShot">
+		<speed>7</speed>
+		<action>
+			<changeSpeed>
+				<speed>0</speed>
+				<term>20</term>
+			</changeSpeed>
+			<wait>20</wait>
 
-  <repeat> <times>50</times>
-   <action>
-    <fire>
-     <direction>20*$rand-10</direction>
-     <speed>2*$rand+0.7</speed>
-     <bullet/>
-    </fire>
-   </action>
-  </repeat>
-  <vanish/>
- </action>
-</bullet>
+			<repeat>
+				<times>50</times>
+				<action>
+					<fire>
+						<direction>20*$rand-10</direction>
+						<speed>2*$rand+0.7</speed>
+						<bullet/>
+					</fire>
+				</action>
+			</repeat>
+			<vanish/>
+		</action>
+	</bullet>
 
-<action label="top">
- <repeat> <times>4</times>
- <action>
+	<action label="top">
+		<repeat>
+			<times>4</times>
+			<action>
 
- <fire>
-  <direction type="absolute">90</direction>
-  <bulletRef label="featherShot"/>
- </fire>
- <wait>30+$rank*30</wait>
- <fire>
-  <direction type="absolute">-90</direction>
-  <bulletRef label="featherShot"/>
- </fire>
- <wait>30+$rank*30</wait>
+				<fire>
+					<direction type="absolute">90</direction>
+					<bulletRef label="featherShot"/>
+				</fire>
+				<wait>30+$rank*30</wait>
+				<fire>
+					<direction type="absolute">-90</direction>
+					<bulletRef label="featherShot"/>
+				</fire>
+				<wait>30+$rank*30</wait>
 
- </action>
- </repeat>
+			</action>
+		</repeat>
 
- <wait>120</wait>
+		<wait>120</wait>
 
- <repeat> <times>4</times>
- <action>
+		<repeat>
+			<times>4</times>
+			<action>
 
- <fire>
-  <direction type="absolute">90</direction>
-  <bulletRef label="featherShot"/>
- </fire>
- <wait>40-$rank*20</wait>
- <fire>
-  <direction type="absolute">-90</direction>
-  <bulletRef label="featherShot"/>
- </fire>
- <wait>40-$rank*20</wait>
+				<fire>
+					<direction type="absolute">90</direction>
+					<bulletRef label="featherShot"/>
+				</fire>
+				<wait>40-$rank*20</wait>
+				<fire>
+					<direction type="absolute">-90</direction>
+					<bulletRef label="featherShot"/>
+				</fire>
+				<wait>40-$rank*20</wait>
 
- </action>
- </repeat>
+			</action>
+		</repeat>
 
-<wait>60</wait>
+		<wait>60</wait>
 
-</action>
+	</action>
 
 </bulletml>

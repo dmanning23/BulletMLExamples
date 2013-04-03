@@ -1,20 +1,15 @@
 <?xml version="1.0" ?>
 <!DOCTYPE bulletml SYSTEM "../bulletml.dtd">
 
-<bulletml type="vertical"
-          xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
 	<action label="top">
-
 		<actionRef label="allway"/>
 		<actionRef label="bar"/>
-
 		<wait>200</wait>
-
 	</action>
 
 	<action label="allway">
-
 		<fire>
 			<direction type="aim">15</direction>
 			<bulletRef label="allwaybit"/>
@@ -28,14 +23,11 @@
 				</fire>
 			</action>
 		</repeat>
-
 	</action>
-
 
 	<bullet label="allwaybit">
 		<speed>6.0</speed>
 		<action>
-
 			<repeat>
 				<times>999</times>
 				<action>
@@ -50,31 +42,26 @@
 					<wait>6 - 4 * $rank</wait>
 				</action>
 			</repeat>
-
 		</action>
 	</bullet>
 
 	<bullet label="stopandgo">
 		<speed>1.0</speed>
 		<action>
-
 			<wait>20</wait>
 			<changeSpeed>
 				<speed>0.0001</speed>
 				<term>1</term>
 			</changeSpeed>
 			<wait>40</wait>
-
 			<changeSpeed>
 				<speed>4.0</speed>
 				<term>300</term>
 			</changeSpeed>
-
 		</action>
 	</bullet>
 
 	<action label="bar">
-
 		<fire>
 			<bulletRef label="barhand">
 				<param>1</param>
@@ -85,14 +72,12 @@
 				<param>-1</param>
 			</bulletRef>
 		</fire>
-
 	</action>
 
 	<bullet label="barhand">
 		<direction type="absolute">0</direction>
 		<speed>0.0001</speed>
 		<action>
-
 			<fire>
 				<direction type="absolute">90</direction>
 				<speed>4.0 - 2.0 * $rank</speed>
@@ -132,7 +117,6 @@
 				</action>
 			</repeat>
 			<wait>5</wait>
-
 			<repeat>
 				<times>20</times>
 				<action>
@@ -177,22 +161,18 @@
 					<wait>5</wait>
 				</action>
 			</repeat>
-
 			<vanish/>
-
 		</action>
 	</bullet>
 
 	<bullet label="barbit">
 		<action>
-
 			<wait>5</wait>
 			<changeSpeed>
 				<speed>0.0001</speed>
 				<term>1</term>
 			</changeSpeed>
 			<wait>5</wait>
-
 			<fire>
 				<direction type="relative">90 * $1</direction>
 				<speed>1.3</speed>
@@ -208,9 +188,7 @@
 					</fire>
 				</action>
 			</repeat>
-
 			<vanish/>
-
 		</action>
 	</bullet>
 

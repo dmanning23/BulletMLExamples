@@ -1,11 +1,13 @@
 <?xml version="1.0" ?>
 <!DOCTYPE bulletml SYSTEM "../bulletml.dtd">
 <bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+
 	<bullet  label="Dummy">
 		<action>
 			<vanish/>
 		</action>
 	</bullet>
+	
 	<action  label="XWay">
 		<actionRef  label="XWayFan">
 			<param>
@@ -19,6 +21,7 @@
 			</param>
 		</actionRef>
 	</action>
+	
 	<action  label="XWayFan">
 		<repeat>
 			<times>
@@ -37,6 +40,7 @@
 			</action>
 		</repeat>
 	</action>
+	
 	<action  label="spiral">
 		<fire>
 			<speed>
@@ -79,6 +83,7 @@
 			 225
 		</wait>
 	</action>
+	
 	<action  label="top1">
 		<actionRef  label="spiral">
 			<param>
@@ -91,6 +96,7 @@
 			</param>
 		</actionRef>
 	</action>
+	
 	<action  label="fan4">
 		<fire>
 			<direction  type="absolute">
@@ -126,6 +132,7 @@
 			</action>
 		</repeat>
 	</action>
+	
 	<action  label="top2">
 		<actionRef  label="fan4">
 			<param>
@@ -133,6 +140,7 @@
 			</param>
 		</actionRef>
 	</action>
+	
 	<action  label="top3">
 		<actionRef  label="fan4">
 			<param>

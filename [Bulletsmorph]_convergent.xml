@@ -1,11 +1,9 @@
 <?xml version="1.0" ?>
 <!DOCTYPE bulletml SYSTEM "../bulletml.dtd">
 
-<bulletml type="vertical"
-          xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
+<bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
 	<action label="top">
-
 		<fire>
 			<direction type="absolute">360 * $rand</direction>
 			<speed>1.0</speed>
@@ -43,9 +41,7 @@
 				</fire>
 			</action>
 		</repeat>
-
 		<wait>150</wait>
-
 	</action>
 
 	<bullet label="nwaybit">
@@ -56,7 +52,6 @@
 				<bullet/>
 			</fire>
 			<wait>4</wait>
-
 			<repeat>
 				<times>2 + 4 * $rank</times>
 				<action>
@@ -68,11 +63,8 @@
 					<wait>4</wait>
 				</action>
 			</repeat>
-
 			<vanish/>
-
 		</action>
 	</bullet>
-
 
 </bulletml>

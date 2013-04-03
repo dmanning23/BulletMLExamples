@@ -1,12 +1,13 @@
 <?xml version="1.0" ?>
 <!DOCTYPE bulletml SYSTEM "http://u/~i/bulletml.dtd">
 <bulletml>
+
 	<action label="top">
 		<actionRef label="impl:100">
-
 		</actionRef>
 		<wait>80</wait>
 	</action>
+	
 	<action label="impl:100">
 		<repeat>
 			<times>4</times>
@@ -16,7 +17,7 @@
 					<speed type="absolute">($1+$rand*$1)*($rank/2+0.65)</speed>
 					<bullet>
 						<action>
-							<actionRef label="impl:205"></actionRef>
+							<actionRef label="impl:205"/>
 						</action>
 					</bullet>
 				</fire>
@@ -24,11 +25,13 @@
 			</action>
 		</repeat>
 	</action>
+	
 	<action label="impl:205">
 		<actionRef label="bulletmls/[ESP_RADE]_round_123_boss_satoru_5way.xml:_:idousite5way">
 			<param>$rank*3+$rand</param>
 		</actionRef>
 	</action>
+	
 	<action label="bulletmls/[ESP_RADE]_round_123_boss_satoru_5way.xml:_:idousite5way">
 		<changeDirection>
 			<direction type="aim">$rand*360</direction>
@@ -48,6 +51,7 @@
 		</changeSpeed>
 		<vanish/>
 	</action>
+	
 	<action label="bulletmls/[ESP_RADE]_round_123_boss_satoru_5way.xml:_:5way">
 		<actionRef label="bulletmls/[ESP_RADE]_round_123_boss_satoru_5way.xml:_:1way">
 			<param>$1</param>
@@ -70,11 +74,12 @@
 			<param>30</param>
 		</actionRef>
 	</action>
+	
 	<action label="bulletmls/[ESP_RADE]_round_123_boss_satoru_5way.xml:_:1way">
 		<fire>
 			<direction type="aim">$2+$1*$rand*2-$1</direction>
 			<speed type="absolute">1</speed>
-			<bullet></bullet>
+			<bullet/>
 		</fire>
 		<repeat>
 			<times>20</times>
@@ -82,9 +87,10 @@
 				<fire>
 					<direction type="aim">$2+$1*$rand*2-$1</direction>
 					<speed type="sequence">0.1</speed>
-					<bullet></bullet>
+					<bullet/>
 				</fire>
 			</action>
 		</repeat>
 	</action>
+	
 </bulletml>
