@@ -4,61 +4,64 @@
 <bulletml type="vertical"
           xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
-<action label="top">
+	<action label="top">
 
-  <fire>
-    <speed>0.1</speed>
-    <bulletRef label="cross">
-    </bulletRef>
-  </fire>
-  <wait>5</wait>
+		<fire>
+			<speed>0.1</speed>
+			<bulletRef label="cross">
+			</bulletRef>
+		</fire>
+		<wait>5</wait>
 
-  <repeat><times>40 + 60 * $rank</times><action>
-    <fire>
-      <speed type="sequence">0.04</speed>
-      <bulletRef label="cross">
-      </bulletRef>
-    </fire>
-    <wait>20 - 10 * $rank</wait>
-  </action></repeat>
+		<repeat>
+			<times>40 + 60 * $rank</times>
+			<action>
+				<fire>
+					<speed type="sequence">0.04</speed>
+					<bulletRef label="cross">
+					</bulletRef>
+				</fire>
+				<wait>20 - 10 * $rank</wait>
+			</action>
+		</repeat>
 
-  <wait>60</wait>
+		<wait>60</wait>
 
-</action>
+	</action>
 
-<bullet label="cross">
-<direction type="aim">0</direction>
-<action>
+	<bullet label="cross">
+		<direction type="aim">0</direction>
+		<action>
 
-  <changeSpeed>
-    <speed type="relative">4.0</speed>
-    <term>300</term>
-  </changeSpeed>
+			<changeSpeed>
+				<speed type="relative">4.0</speed>
+				<term>300</term>
+			</changeSpeed>
 
-  <wait>45</wait>
+			<wait>45</wait>
 
-  <fire>
-    <direction type="absolute">0</direction>
-    <speed>1.3</speed>
-    <bullet/>
-  </fire>
-  <fire>
-    <direction type="absolute">90</direction>
-    <speed>1.3</speed>
-    <bullet/>
-  </fire>
-  <fire>
-    <direction type="absolute">-90</direction>
-    <speed>1.3</speed>
-    <bullet/>
-  </fire>
-  <fire>
-    <direction type="aim">0</direction>
-    <speed>1.3</speed>
-    <bullet/>
-  </fire>
+			<fire>
+				<direction type="absolute">0</direction>
+				<speed>1.3</speed>
+				<bullet/>
+			</fire>
+			<fire>
+				<direction type="absolute">90</direction>
+				<speed>1.3</speed>
+				<bullet/>
+			</fire>
+			<fire>
+				<direction type="absolute">-90</direction>
+				<speed>1.3</speed>
+				<bullet/>
+			</fire>
+			<fire>
+				<direction type="aim">0</direction>
+				<speed>1.3</speed>
+				<bullet/>
+			</fire>
 
-</action>
-</bullet>
+		</action>
+	</bullet>
 
 </bulletml>

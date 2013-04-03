@@ -4,90 +4,96 @@
 <bulletml type="vertical"
           xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
-<action label="top">
+	<action label="top">
 
-  <repeat><times>8</times><action>
-    <actionRef label="center">
-      <param>90 * $rand</param>
-      <param>1</param>
-    </actionRef>
-    <wait>12</wait>
-    <actionRef label="center">
-      <param>90 * $rand</param>
-      <param>-1</param>
-    </actionRef>
-    <wait>12</wait>
-    <actionRef label="center">
-      <param>30 * $rand</param>
-      <param>1</param>
-    </actionRef>
-    <wait>12</wait>
-    <actionRef label="center">
-      <param>30 * $rand</param>
-      <param>-1</param>
-    </actionRef>
-    <wait>12</wait>
-  </action></repeat>
+		<repeat>
+			<times>8</times>
+			<action>
+				<actionRef label="center">
+					<param>90 * $rand</param>
+					<param>1</param>
+				</actionRef>
+				<wait>12</wait>
+				<actionRef label="center">
+					<param>90 * $rand</param>
+					<param>-1</param>
+				</actionRef>
+				<wait>12</wait>
+				<actionRef label="center">
+					<param>30 * $rand</param>
+					<param>1</param>
+				</actionRef>
+				<wait>12</wait>
+				<actionRef label="center">
+					<param>30 * $rand</param>
+					<param>-1</param>
+				</actionRef>
+				<wait>12</wait>
+			</action>
+		</repeat>
 
-  <wait>150</wait>
+		<wait>150</wait>
 
-</action>
+	</action>
 
-<action label="center">
+	<action label="center">
 
-  <fire>
-    <direction type="absolute">360 * $rand</direction>
-    <bulletRef label="circle">
-      <param>$1</param>
-      <param>$2</param>
-    </bulletRef>
-  </fire>
-  <repeat><times>(4 + 8 * $rank) - 1</times><action>
-    <fire>
-      <direction type="sequence">360 / (4 + 8 * $rank)</direction>
-      <bulletRef label="circle">
-        <param>$1</param>
-        <param>$2</param>
-      </bulletRef>
-    </fire>
-  </action></repeat>
+		<fire>
+			<direction type="absolute">360 * $rand</direction>
+			<bulletRef label="circle">
+				<param>$1</param>
+				<param>$2</param>
+			</bulletRef>
+		</fire>
+		<repeat>
+			<times>(4 + 8 * $rank) - 1</times>
+			<action>
+				<fire>
+					<direction type="sequence">360 / (4 + 8 * $rank)</direction>
+					<bulletRef label="circle">
+						<param>$1</param>
+						<param>$2</param>
+					</bulletRef>
+				</fire>
+			</action>
+		</repeat>
 
-</action>
+	</action>
 
-<bullet label="circle">
-<speed>1.3</speed>
-<action>
+	<bullet label="circle">
+		<speed>1.3</speed>
+		<action>
 
-  <wait>20</wait>
+			<wait>20</wait>
 
-  <changeDirection>
-    <direction type="absolute">180 + $1 * $2</direction>
-    <term>1</term>
-  </changeDirection>
+			<changeDirection>
+				<direction type="absolute">180 + $1 * $2</direction>
+				<term>1</term>
+			</changeDirection>
 
-  <wait>125 - $1</wait>
+			<wait>125 - $1</wait>
 
-  <fire>
-    <direction type="aim">0</direction>
-    <bulletRef label="red"/>
-  </fire>
+			<fire>
+				<direction type="aim">0</direction>
+				<bulletRef label="red"/>
+			</fire>
 
-  <vanish/>
+			<vanish/>
 
-</action>
-</bullet>
+		</action>
+	</bullet>
 
-<bullet label="red">
-<speed>0.1</speed>
-<action>
+	<bullet label="red">
+		<speed>0.1</speed>
+		<action>
 
-  <changeSpeed>
-    <speed>4.0</speed>
-    <term>300</term>
-  </changeSpeed>
+			<changeSpeed>
+				<speed>4.0</speed>
+				<term>300</term>
+			</changeSpeed>
 
-</action>
-</bullet>
+		</action>
+	</bullet>
 
 
 </bulletml>

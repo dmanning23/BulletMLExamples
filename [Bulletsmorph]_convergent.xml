@@ -4,64 +4,75 @@
 <bulletml type="vertical"
           xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
-<action label="top">
+	<action label="top">
 
- <fire>
-  <direction type="absolute">360 * $rand</direction>
-  <speed>1.0</speed>
-  <bulletRef label="nwaybit">
-   <param>90</param>
-   <param>1.5 * (0.5 + 0.5 * $rank)</param>
-   <param>3</param>
-  </bulletRef>
- </fire>
- <repeat> <times>35</times> <action>
-  <fire>
-   <direction type="sequence">10</direction>
-   <speed>1.0</speed>
-   <bulletRef label="nwaybit">
-    <param>90</param>
-    <param>1.5 * (0.5 + 0.5 * $rank)</param>
-    <param>3</param>
-   </bulletRef>
-  </fire>
- </action></repeat>
- <repeat> <times>36</times> <action>
-  <fire>
-   <direction type="sequence">10</direction>
-   <speed>1.0</speed>
-   <bulletRef label="nwaybit">
-    <param>-90</param>
-    <param>1.5 * (0.5 + 0.5 * $rank)</param>
-    <param>-3</param>
-   </bulletRef>
-  </fire>
- </action></repeat>
+		<fire>
+			<direction type="absolute">360 * $rand</direction>
+			<speed>1.0</speed>
+			<bulletRef label="nwaybit">
+				<param>90</param>
+				<param>1.5 * (0.5 + 0.5 * $rank)</param>
+				<param>3</param>
+			</bulletRef>
+		</fire>
+		<repeat>
+			<times>35</times>
+			<action>
+				<fire>
+					<direction type="sequence">10</direction>
+					<speed>1.0</speed>
+					<bulletRef label="nwaybit">
+						<param>90</param>
+						<param>1.5 * (0.5 + 0.5 * $rank)</param>
+						<param>3</param>
+					</bulletRef>
+				</fire>
+			</action>
+		</repeat>
+		<repeat>
+			<times>36</times>
+			<action>
+				<fire>
+					<direction type="sequence">10</direction>
+					<speed>1.0</speed>
+					<bulletRef label="nwaybit">
+						<param>-90</param>
+						<param>1.5 * (0.5 + 0.5 * $rank)</param>
+						<param>-3</param>
+					</bulletRef>
+				</fire>
+			</action>
+		</repeat>
 
- <wait>150</wait>
+		<wait>150</wait>
 
-</action>
+	</action>
 
-<bullet label="nwaybit"><action>
- <fire>
-  <direction type="relative">$1</direction>
-  <speed>$2</speed>
-  <bullet/>
- </fire>
- <wait>4</wait>
+	<bullet label="nwaybit">
+		<action>
+			<fire>
+				<direction type="relative">$1</direction>
+				<speed>$2</speed>
+				<bullet/>
+			</fire>
+			<wait>4</wait>
 
- <repeat> <times>2 + 4 * $rank</times> <action>
-  <fire>
-   <direction type="sequence">$3</direction>
-   <speed>$2</speed>
-   <bullet/>
-  </fire>
-  <wait>4</wait>
- </action></repeat>
+			<repeat>
+				<times>2 + 4 * $rank</times>
+				<action>
+					<fire>
+						<direction type="sequence">$3</direction>
+						<speed>$2</speed>
+						<bullet/>
+					</fire>
+					<wait>4</wait>
+				</action>
+			</repeat>
 
- <vanish/>
+			<vanish/>
 
-</action></bullet>
+		</action>
+	</bullet>
 
 
 </bulletml>
