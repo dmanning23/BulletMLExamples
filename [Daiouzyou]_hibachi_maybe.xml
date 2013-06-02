@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE bulletml SYSTEM "../bulletml.dtd">
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
 <bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 	<bullet  label="Dummy">
 		<action>

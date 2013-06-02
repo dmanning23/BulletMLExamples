@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE bulletml SYSTEM "../bulletml.dtd">
+<!DOCTYPE bulletml SYSTEM "bulletml.dtd">
 <bulletml>
 	<action label="top1">
 		<repeat>
