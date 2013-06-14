@@ -18,10 +18,10 @@
 	<action label="twseed2">
 		<fire>
 			<direction>$1</direction>
+			<speed>3</speed>
 			<bulletRef label="nrm"/>
 		</fire>
 	</action>
-
 
 	<bullet label="nrm">
 		<speed>1</speed>
