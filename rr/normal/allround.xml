@@ -4,39 +4,9 @@
 <bulletml type="vertical"
           xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
-	<action label="top">
+<action label="circle">
 		<repeat>
-			<times>10 * $rank</times>
-			<action label="circle">
-				<repeat>
-					<times>4+$rank*36</times>
-					<action>
-						<fire>
-							<direction type="sequence">360/(4+$rank*36-1)</direction>
-							<speed>1</speed>
-							<bullet>
-								
-							</bullet>
-						</fire>
-					</action>
-				</repeat>
-				<wait>100 * $rank</wait>
-			</action>
-		</repeat>
-	</action>
-	
-<!--	<action label="top">
-		<repeat>
-			<times>10 * $rank</times>
-			<actionRef label="circle">
-				
-			</actionRef>
-		</repeat>
-	</action>
-	
-	<action label="circle">
-		<repeat>
-			<times>4+$rank*36</times>
+			<times>10</times>
 			<action>
 				<fire>
 					<direction type="sequence">360/(4+$rank*36-1)</direction>
@@ -45,7 +15,16 @@
 				</fire>
 			</action>
 		</repeat>
-		<wait>100 * $rank</wait>
-	</action>-->
-
+		<wait>100</wait>
+	</action>
+	
+	<action label="top">
+		<repeat>
+			<times>10 * $rank</times>
+			<actionRef label="circle">
+			</actionRef>
+		</repeat>
+	</action>
+	
+	
 </bulletml>

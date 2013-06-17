@@ -5,10 +5,18 @@
           xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 
 	<action label="top">
-		<fire>
-			<bullet/>
-		</fire>
-		<wait>50-$rank*25</wait>
+		<repeat>
+			<times>10</times>
+			<action>
+				<fire>
+					<speed type="sequence">0.3</speed>
+					<bullet label="test">
+						<speed>1</speed>
+					</bullet>
+				</fire>
+				<wait>12</wait>
+			</action>
+		</repeat>
 	</action>
 
 </bulletml>
