@@ -2,15 +2,24 @@
 <!DOCTYPE bulletml SYSTEM "bulletml.dtd">
 <bulletml type="vertical" xmlns="http://www.asahi-net.or.jp/~cs8k-cyu/bulletml">
 	<action label="top">
-		<fire>
-			<bulletRef label="roll" />
-		</fire>
+		<repeat>
+			<times>5</times>
+			<action>
+				<fireRef label="shot" />
+				<wait>$rand * 60</wait>
+			</action>
+		</repeat>
 	</action>
 	
-	<bullet label="roll">
+	<fire label="shot">
+		<bulletRef label="roll" />
+	</fire>
 	
+	<bullet label="roll">
+		<direction type="aim">(($rand * 50) - 25)</direction>
+		<speed>2 + ($rank * ($rand*3))</speed>
 		<action>
-			<wait>40+$rand*20</wait>
+			<wait>30+$rand*20</wait>
 			<changeDirection>
 				<direction type="relative">-90</direction>
 				<term>4</term>
