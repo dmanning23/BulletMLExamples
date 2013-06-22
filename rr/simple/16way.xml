@@ -6,15 +6,15 @@
 
 	<action label="top">
 		<repeat>
-			<times>(6+$rank*10)</times>
+			<times>(7+$rank*50)</times>
 			<action>
 				<fire>
-					<direction type="sequence">360/(6+$rank*10)</direction>
+					<direction type="sequence">360/(6+$rank*50)</direction>
 					<speed>5 * $rank</speed>
 					<bullet>
 					</bullet>
 				</fire>
-				<wait>100/(6+$rank*10)</wait>
+				<wait>50/(6+$rank*10)</wait>
 			</action>
 		</repeat>
 		<vanish/>

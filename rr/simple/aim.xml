@@ -8,6 +8,17 @@
 		<repeat>
 			<times>10</times>
 			<action>
+				<actionRef label="aim"/>
+				<wait>30 * $rank</wait>
+			</action>
+		</repeat>
+	</action>
+
+	<!--shoot a stream of bullets at the player-->
+	<action label="aim">
+		<repeat>
+			<times>10</times>
+			<action>
 				<fire>
 					<speed type="sequence">0.3</speed>
 					<bullet label="test">
